@@ -1,4 +1,0 @@
-import{parseDate as e}from"./parse-date-DHsdom8D.js";import{got_default as t}from"./got-BwctkUCD.js";import{timezone as n}from"./timezone-CCdTtC9I.js";import{load as r}from"cheerio";const i=async i=>{let a=await t.get(i),o=r(a.data),s=n(e(o(`time`).attr(`datetime`)),8);o(`.image-container, .image-container-fill`).removeAttr(`style`),o(`.video-package`).each((e,t)=>{let n=o(t),r=n.find(`.video-description`).html(),i=n.attr(`data-video-url`);n.html(`
-            <p>${r}</p>
-            <iframe frameborder="0" src="${i}" allowFullScreen="true"></iframe>
-        `)});let c=o(`article`).html();return{description:c,pubDate:s}},a=(e,t)=>{let n=`https://www.jianshu.com`;return Promise.all(e.map(e=>{let a=r(e),o=a(`.title`),s=new URL(o.attr(`href`),n).toString();return t.tryGet(s,async()=>{let e=await i(s);return{title:o.text(),link:s,author:a(`.nickname`).text(),...e}})}))};var o={ProcessFeed:a};export{o as utils_default$4};

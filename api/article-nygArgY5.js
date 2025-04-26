@@ -1,1 +1,0 @@
-import{parseDate as e}from"./parse-date-DHsdom8D.js";const t=`CosplayTele`,n=`https://cosplaytele.com/`;function r(t){return{title:t.title.rendered,description:t.content.rendered,pubDate:e(t.date_gmt),link:t.link}}var i=r;export{t as SUB_NAME_PREFIX,n as SUB_URL,i as article_default};

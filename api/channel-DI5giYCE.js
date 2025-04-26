@@ -1,5 +1,0 @@
-import"./esm-shims-CtP6w_ML.js";import"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import"./ofetch-CWQqZcqz.js";import"./helpers-RrXnNmv1.js";import"./cache-CvppK6AM.js";import"./parse-date-DHsdom8D.js";import"./got-BwctkUCD.js";import"./invalid-parameter-CvwVNf6G.js";import{processFeed as e}from"./utils-BMTM_lTY.js";const t=t=>e(`channel`,t),n={path:`/channel/:type?/:language?`,name:`专题・栏目`,maintainers:[`prnake`,`mintyfrankie`],parameters:{type:`栏目，缺省为最新`,language:"语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体"},radar:[{source:[`theinitium.com/channel/:type`],target:`/channel/:type`}],handler:t,example:`/theinitium/channel/latest/zh-hans`,categories:[`new-media`,`popular`],description:`Type 栏目：
-
-| 最新   | 深度    | What’s New | 广场              | 科技       | 风物    | 特约     | ... |
-| ------ | ------- | ---------- | ----------------- | ---------- | ------- | -------- | --- |
-| latest | feature | news-brief | notes-and-letters | technology | culture | pick_up | ... |`};export{n as route};

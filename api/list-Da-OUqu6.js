@@ -1,1 +1,0 @@
-const e={path:`/list/:id`,name:`Unknown`,maintainers:[],handler:t};function t(e){let t=e.req.param(`id`),n=`/jiemian${t?`/lists/${t}`:``}`;e.set(`redirect`,n)}export{e as route};

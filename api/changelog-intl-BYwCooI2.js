@@ -1,5 +1,0 @@
-import"./esm-shims-CtP6w_ML.js";import"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import"./ofetch-CWQqZcqz.js";import"./cache-CvppK6AM.js";import"./render-DE4LRFBD.js";import"./parse-date-DHsdom8D.js";import"./utils-C0n9w5zk.js";import{handler$2 as e}from"./changelog-BPIsC_B_.js";const t={path:`/intl/changelog/:id/:lang?`,categories:[`game`],example:`/taptap/intl/changelog/191001/zh_TW`,parameters:{id:`Game's App ID, you may find it from the URL of the Game`,lang:"Language, checkout the table below for possible values, default is `en_US`"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`www.taptap.io/app/:id`],target:`/intl/changelog/:id`}],name:`Game's Changelog`,maintainers:[`hoilc`,`ETiV`],handler:e,description:`Language Code
-
-| English (US) | 繁體中文 | 한국어 | 日本語 |
-| ------------ | -------- | ------ | ------ |
-| en_US       | zh_TW   | ko_KR | ja_JP |`};export{t as route};

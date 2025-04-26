@@ -1,8 +1,0 @@
-import"./esm-shims-CtP6w_ML.js";import{config as e}from"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import{ofetch_default as t}from"./ofetch-CWQqZcqz.js";import{load as n}from"cheerio";const r={path:`/previews/:date`,name:`新番预告`,maintainers:[`kjasn`],example:`/hanime1/previews/202504`,categories:[`anime`],parameters:{date:{description:`Date in YYYYMM format`}},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`hanime1.me/previews/:date`],target:`/previews/:date`}],handler:async r=>{let i=`https://hanime1.me`,{date:a}=r.req.param(),o=`${i}/previews/${a}`,s=await t(o,{headers:{referer:i,"user-agent":e.trueUA}}),c=n(s),l=c(`.content-padding .row`).toArray().map(e=>{let t=c(e),n=t.find(`.preview-info-content h4`).first().text().trim(),r=t.find(`.preview-info-cover img`).attr(`src`)||``,i=t.find(`.preview-info-cover div`).text().trim(),a=t.find(`.trailer-modal-trigger`).attr(`data-target`)||``,o=a&&c(`${a} video source`).attr(`src`)||``,s=t.find(`.caption`).first().text().trim(),l=t.find(`.single-video-tag a`).toArray().map(e=>c(e).text().trim());return{title:n,description:`
-                    <p>${s} </p>
-                    <p>Tags: [${l.join(`, `)}]</p>
-                    <video controls width="100%" poster="${r}">
-                        <source src="${o}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    `,enclosure_url:r,enclosure_type:`image/jpeg`,link:o,guid:`hanime1-${i}-${n}`}});return{title:`Hanime1 ${a}新番预告`,link:o,item:l}}};export{r as route};

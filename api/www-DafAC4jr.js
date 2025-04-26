@@ -1,9 +1,0 @@
-import"./esm-shims-CtP6w_ML.js";import"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import{ofetch_default as e}from"./ofetch-CWQqZcqz.js";import{cache_default as t}from"./cache-CvppK6AM.js";import{parseDate as n}from"./parse-date-DHsdom8D.js";import{timezone as r}from"./timezone-CCdTtC9I.js";import{load as i}from"cheerio";const a=`https://www.zjut.edu.cn/`,o=`www.zjut.edu.cn`,s={path:`/www/:type`,categories:[`university`],example:`/zjut/www/4528`,parameters:{type:`分类，见下表`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`浙江工业大学首页`,maintainers:[`zhullyb`],url:`www.zjut.edu.cn`,handler:c,radar:[{source:[`www.zjut.edu.cn/:type/list.htm`],target:`/www/:type`}],description:`| 板块 | 参数 |
-| ------- | ------- |
-| 学术动态 | xsdt_4662 |
-| 三创·人物 | 4527 |
-| 通知公告 | 4528 |
-| 美誉工大 | 5389 |
-| 智库工大 | 5390 |
-| 工大校历 | 4520 |
-| 校区班车 | xqbc |`};async function c(s){let c=s.req.param(`type`),l=await e(a+c+`/list.htm`),u=i(l),d=u(`li.news.clearfix`).toArray().map(e=>{let t=u(e),i=t.find(`a`);try{let e=i.text()||``,o=i.attr(`href`);o?o.startsWith(`http`)||(o=a.slice(0,-1)+o):o=``;let s=t.find(`.news_meta`).text();if(!s)return{title:``,link:``,pubDate:Date.now()};let c=r(n(s),8);return{title:e,link:o,pubDate:c}}catch{return{title:``,link:``,pubDate:Date.now()}}}).filter(e=>e.title&&e.link),f=await Promise.all(d.map(n=>t.tryGet(n.link,async()=>{let t={...n,description:``};if(o===new URL(n.link).hostname)if(new URL(n.link).pathname.startsWith(`/upload`))t.description=n.link;else{let r=await e(n.link),a=i(r);t.description=a(`div.wp_articlecontent`).html()||``}else t.description=n.link;return t})));return{title:u(`head > title`).text()+` - 浙江工业大学`,link:a+c,item:f}}export{s as route};
