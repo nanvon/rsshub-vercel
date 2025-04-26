@@ -1,0 +1,1 @@
+const e={path:[`/news/zzkx`,`/zzkx`],name:`Unknown`,maintainers:[],handler:t};function t(e){let t=`/cs/sylm/jsbd`;e.set(`redirect`,t)}export{e as route};

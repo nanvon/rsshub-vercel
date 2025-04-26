@@ -1,0 +1,1 @@
+import{strict as e}from"assert";const t=60*60*1e3,n=-new Date().getTimezoneOffset()/60;function r(r,i=n){return typeof r==`string`&&(r=new Date(r)),e.ok(r instanceof Date),new Date(r.getTime()-t*(i-n))}export{r as timezone};

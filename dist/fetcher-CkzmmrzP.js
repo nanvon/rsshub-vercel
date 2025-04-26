@@ -1,0 +1,1 @@
+import{ofetch_default as e}from"./ofetch-CWQqZcqz.js";import{cache_default as t}from"./cache-CvppK6AM.js";function n(n,r){return t.tryGet(n,async()=>{let t=await e(n);return r(t)})}export{n as fetchDataItemCached};

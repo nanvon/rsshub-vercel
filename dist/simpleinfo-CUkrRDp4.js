@@ -1,0 +1,11 @@
+import{__dirname as e,init_esm_shims as t}from"./esm-shims-CtP6w_ML.js";import"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import"./ofetch-CWQqZcqz.js";import"./helpers-RrXnNmv1.js";import{cache_default as n}from"./cache-CvppK6AM.js";import{art as r}from"./render-DE4LRFBD.js";import{parseDate as i}from"./parse-date-DHsdom8D.js";import{got_default as a}from"./got-BwctkUCD.js";import{timezone as o}from"./timezone-CCdTtC9I.js";import s from"node:path";import{load as c}from"cheerio";t();const l={path:`/:category?`,categories:[`new-media`,`popular`],example:`/simpleinfo`,parameters:{category:`分类名`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`blog.simpleinfo.cc/blog/:category`],target:`/:category`}],name:`志祺七七`,maintainers:[`haukeng`],handler:u,description:`| 夥伴聊聊 | 專案設計 |
+| -------- | -------- |
+| work     | talk     |
+
+| 國內外新聞 | 政治百分百 | 社會觀察家 | 心理與哲學            |
+| ---------- | ---------- | ---------- | --------------------- |
+| news       | politics   | society    | psychology-philosophy |
+
+| 科學大探索 | 環境與健康         | ACG 快樂聊 | 好書籍分享   | 其它主題     |
+| ---------- | ------------------ | ---------- | ------------ | ------------ |
+| science    | environment-health | acg        | book-sharing | other-topics |`};async function u(t){let l=t.req.param(`category`),u=`https://blog.simpleinfo.cc`,d=`${u}${l?l===`work`||l===`talk`?`/blog/${l}`:`/shasha77?category=${l}`:`/shasha77`}`,f=await a(d),p=c(f.data),m=`${p(`.-active`).text()} - 簡訊設計`;p(`.-ad`).remove();let h=p(`.article-item`).map((e,t)=>(t=p(t),{title:t.find(`.title`).text(),link:t.find(`a`).first().attr(`href`),category:t.find(`.category`).text()})).get(),g=await Promise.all(h.map(t=>n.tryGet(t.link,async()=>{let n=await a(t.link),l=c(n.data);return t.author=l(`meta[property="article:author"]`).attr(`content`),t.pubDate=o(i(l(`meta[property="article:published_time"]`).attr(`content`)),8),t.description=r(s.join(e,`templates/description-40eff032.art`),{image:l(`meta[property="og:image"]`).attr(`content`),description:l(`.article-content`).first().html()}),t})));return{title:m,link:d,language:`zh-tw`,item:g}}export{l as route};

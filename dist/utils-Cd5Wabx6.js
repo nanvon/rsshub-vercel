@@ -1,0 +1,1 @@
+import{got_default as e}from"./got-BwctkUCD.js";const t=`http://www.yxdown.com`,n=async()=>{let n=await e(t),r=/(?<=.cookie=").*(?=; path)/g,i=n.data.match(r)[0];return i};export{n as getCookie$2,t as rootUrl$30};

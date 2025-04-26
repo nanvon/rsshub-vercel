@@ -1,0 +1,8 @@
+import"./esm-shims-CtP6w_ML.js";import"./config-DYqAlsU3.js";import"./logger-BlLSmUdl.js";import{ofetch_default as e}from"./ofetch-CWQqZcqz.js";import{load as t}from"cheerio";const n=`http://job.hrbeu.edu.cn`,r={path:`/job/calendar`,categories:[`university`],example:`/hrbeu/job/calendar`,parameters:{},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`job.hrbeu.edu.cn/*`]}],name:`就业服务平台`,maintainers:[`Derekmini`],handler:i,url:`job.hrbeu.edu.cn/*`,description:`| 通知公告 | 热点新闻 |
+| :------: | :------: |
+|   tzgg   |   rdxw   |
+
+#### 大型招聘会 {#ha-er-bin-gong-cheng-da-xue-jiu-ye-fu-wu-ping-tai-da-xing-zhao-pin-hui}
+
+
+#### 今日招聘会 {#ha-er-bin-gong-cheng-da-xue-jiu-ye-fu-wu-ping-tai-jin-ri-zhao-pin-hui}`};async function i(){let r=new Date,i=r.getFullYear(),a=r.getMonth()+1,o;o=a<10?`0`+a:a;let s=r.getDate(),c=await e(`http://job.hrbeu.edu.cn/HrbeuJY/Web/Employ/QueryCalendar`,{query:{yearMonth:i+`-`+o}}),l=``;for(let e=0,t=c.length;e<t;e++)c[e].day===Number(s)&&(l=c[e].Items[0].link);let u=await e(`${n}${l}`,{parseResponse:e=>e}),d=t(u),f=d(`li.clearfix`).map((e,t)=>({title:d(t).find(`span.news_tit.news_tit_s`).find(`a`).attr(`title`),description:`点击标题，登录查看招聘详情`,link:d(t).find(`span.news_tit.news_tit_s`).find(`a`).attr(`href`)})).get();return{title:`今日招聘会`,link:`http://job.hrbeu.edu.cn/HrbeuJY/web`,item:f,allowEmpty:!0}}export{r as route};
