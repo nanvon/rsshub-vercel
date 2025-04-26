@@ -15,6 +15,7 @@
     },
     "license": "MIT",
     "author": "DIYgod",
+    "type": "module",
     "dependencies": {
         "@bbob/html": "4.2.0",
         "@bbob/preset-html5": "4.2.0",
