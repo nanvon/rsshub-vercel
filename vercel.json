@@ -6,10 +6,5 @@
             "source": "/(.*)",
             "destination": "/api/vercel.js"
         }
-    ],
-    "functions": {
-        "api/vercel.js": {
-            "includeFiles": "dist/**/*"
-        }
-    }
+    ]
 }
