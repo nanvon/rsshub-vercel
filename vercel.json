@@ -1,4 +1,8 @@
 {
     "$schema": "https://openapi.vercel.sh/vercel.json",
-    "framework": "hono"
+    "framework": "hono",
+    "env": {
+        "NODE_ENV": "production",
+        "NO_LOGFILES": "true"
+    }
 }
