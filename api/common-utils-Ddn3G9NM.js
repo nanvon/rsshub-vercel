@@ -1,1 +1,0 @@
-import{parseDate as e}from"./parse-date-B2cCVoGk.js";import"title";const t=/\s+/,n=/\s+/g,r=e=>e&&t.test(e)?e.replaceAll(n,` `).trim():e,i=t=>t&&(typeof t!=`object`&&(t=e(t)),t.toISOString()),a=e=>{let t=e.req.path.replace(/\/[^/]*/,``)||`/`;return t};export{r as collapseWhitespace,i as convertDateToISO8601,a as getSubPath};
