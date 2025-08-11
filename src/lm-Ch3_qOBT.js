@@ -1,0 +1,12 @@
+import"./esm-shims-CGUM9TC6.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import{parseDate as e}from"./parse-date-D4osZfpm.js";import"./dist-0j_z2rfc.js";import"./helpers-nWIDkd0K.js";import{cache_default as t}from"./cache-GwMhal7i.js";import"./ofetch-ZUQ1sEMc.js";import{got_default as n}from"./got-CB83B8oA.js";import{timezone as r}from"./timezone-BrNu6iXe.js";import{load as i}from"cheerio";const a={path:`/lm/:id?`,categories:[`traditional-media`],example:`/cctv/lm/xwzk`,parameters:{id:"栏目 id，可在对应栏目页 URL 中找到，默认为 `xwzk` 即 新闻周刊"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`news.cctv.com/:category`],target:`/:category`}],name:`栏目`,maintainers:[`nczitzk`],handler:o,description:`| 焦点访谈 | 等着我 | 今日说法 | 开讲啦 |
+| -------- | ------ | -------- | ------ |
+| jdft     | dzw    | jrsf     | kjl    |
+
+| 正大综艺 | 经济半小时 | 第一动画乐园 |
+| -------- | ---------- | ------------ |
+| zdzy     | jjbxs      | dydhly       |
+
+::: tip
+  更多栏目请看 [这里](https://tv.cctv.com/lm)
+:::`};async function o(a){let o=a.req.param(`id`)??`xwzk`,s=`https://tv.cctv.com/lm/${o}/videoset`,c=await n({method:`get`,url:s}),l=i(c.data),u=c.data.match(/(TOPC\d{16})/)[1],d=`https://api.cntv.cn/NewVideo/getVideoListByColumn?id=${u}&n=20&sort=desc&p=1&mode=0&serviceId=tvcctv`,f=await n({method:`get`,url:d}),p=f.data.data.list.map(t=>({url:t.url,guid:t.guid,image:t.image,title:t.title,pubDate:r(e(t.time),8),link:`https://vdn.apps.cntv.cn/api/getHttpVideoInfo.do?pid=${t.guid}`,description:`<p>${t.brief.replaceAll(`\r
+`,`</p><p>`)}</p>`})),m=await Promise.all(p.map(e=>t.tryGet(e.link,async()=>{let t=await n({method:`get`,url:e.link}),r=t.data;e.description+=`<video src="${r.hls_url}" controls="controls" poster="${e.image}" width="100%"></video><br>`;for(let t of r.video.chapters)e.description+=`<video src="${t.url}" controls="controls" poster="${t.image}" width="100%"></video><br>`;for(let t=2;r.video[`chapters${t}`];t++)for(let n of r.video[`chapters${t}`])e.description+=`<video src="${n.url}" controls="controls" poster="${n.image}" width="100%"></video><br>`;return e.link=e.url,delete e.url,delete e.image,e})));return{title:l(`title`).text(),link:s,item:m,description:l(`meta[name=description]`).attr(`content`)}}export{a as route};

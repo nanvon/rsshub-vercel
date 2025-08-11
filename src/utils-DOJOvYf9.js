@@ -1,0 +1,1 @@
+import{cache_default as e}from"./cache-Sft5n2jg.js";import{got_default as t}from"./got-DLgbOU4j.js";const n=n=>e.tryGet(`luogu:username:`+n,async()=>{let e=await t(`https://www.luogu.com/user/${n}`,{query:{_contentOnly:1}});return{name:e.data.currentData.user.name,description:e.data.currentData.user.slogan,avatar:e.data.currentData.user.avatar}});export{n as getUserInfoFromUID};

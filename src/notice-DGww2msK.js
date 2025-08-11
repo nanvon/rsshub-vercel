@@ -1,0 +1,7 @@
+import"./esm-shims-CGUM9TC6.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import{parseDate as e}from"./parse-date-D4osZfpm.js";import"./dist-0j_z2rfc.js";import"./helpers-nWIDkd0K.js";import{cache_default as t}from"./cache-GwMhal7i.js";import"./ofetch-ZUQ1sEMc.js";import{got_default as n}from"./got-CB83B8oA.js";import{timezone as r}from"./timezone-BrNu6iXe.js";import{load as i}from"cheerio";const a={0:`9004748`,1:`9004749`,2:`9213612`,3:`8314815`,4:`9222707`},o={path:`/notice/:type?`,categories:[`programming`],example:`/aliyun/notice`,parameters:{type:`N`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`公告`,maintainers:[`muzea`],handler:s,description:`| 类型     | type |
+| -------- | ---- |
+| 全部     |      |
+| 升级公告 | 1    |
+| 安全公告 | 2    |
+| 备案公告 | 3    |
+| 其他     | 4    |`};async function s(o){let s=o.req.param(`type`),c=`https://help.aliyun.com/noticelist/${a[s]||a[0]}.html`,l=await n({method:`get`,url:c}),u=i(l.data),d=u(`ul > li.notice-li`).toArray().map(t=>{let n=u(t),i=n.find(`a`).text().trim(),a=`https://help.aliyun.com`+n.find(`a`).attr(`href`).trim(),o=n.find(`.y-right`).text(),s=r(e(o),8);return{title:i,description:``,link:a,pubDate:s}}),f=await Promise.all(d.map(e=>t.tryGet(e.link,async()=>{let t=await n(e.link),r=i(t.data);return e.description=r(`#se-knowledge`).html(),e})));return{title:u(`title`).text().trim(),link:c,item:f}}export{o as route};
