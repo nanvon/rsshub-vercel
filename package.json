@@ -1,5 +1,5 @@
 {
-    "name": "rsshub",
+    "name": "rsshub-vercel",
     "version": "1.0.0",
     "description": "Make RSS Great Again!",
     "keywords": [
@@ -166,6 +166,9 @@
         "yaml-eslint-parser": "1.3.0"
     },
     "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+    "engines": {
+        "node": ">=22"
+    },
     "pnpm": {
         "onlyBuiltDependencies": [
             "@bbob/core",
@@ -195,6 +198,14 @@
             "safe-buffer": "npm:@nolyfill/safe-buffer@^1",
             "safer-buffer": "npm:@nolyfill/safer-buffer@^1",
             "side-channel": "npm:@nolyfill/side-channel@^1"
+        },
+        "patchedDependencies": {
+            "@bbob/core@4.2.0": "patches/@bbob__core@4.2.0.patch",
+            "@bbob/parser@4.2.0": "patches/@bbob__parser@4.2.0.patch",
+            "@bbob/plugin-helper@4.2.0": "patches/@bbob__plugin-helper@4.2.0.patch",
+            "@bbob/preset-html5@4.2.0": "patches/@bbob__preset-html5@4.2.0.patch",
+            "@bbob/preset@4.2.0": "patches/@bbob__preset@4.2.0.patch",
+            "eslint-nibble@8.1.0": "patches/eslint-nibble@8.1.0.patch"
         }
     }
 }
