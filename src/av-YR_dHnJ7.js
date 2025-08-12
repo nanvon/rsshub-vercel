@@ -1,0 +1,7 @@
+import"./esm-shims-CGUM9TC6.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import{parseDate as e}from"./parse-date-D4osZfpm.js";import"./dist-0j_z2rfc.js";import"./helpers-nWIDkd0K.js";import{cache_default as t}from"./cache-GwMhal7i.js";import"./ofetch-ZUQ1sEMc.js";import{got_default as n}from"./got-CB83B8oA.js";import{timezone as r}from"./timezone-BrNu6iXe.js";import{cookieJar as i,processArticle as a}from"./utils-3gMwkA1t.js";import{load as o}from"cheerio";const s={path:`/av/:catid?`,categories:[`bbs`],example:`/playno1/av`,parameters:{catid:`分类，见下表，默认为全部文章`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1,nsfw:!0},name:`AV`,maintainers:[`TonyRL`],handler:c,description:`::: warning
+目前观测到该博客可能禁止日本 IP 访问。建议部署在日本区以外的服务器上。
+:::
+
+| 全部文章 | AV 新聞 | AV 導覽 |
+| -------- | ------- | ------- |
+| 78       | 3       | 5       |`};async function c(s){let{catid:c=`78`}=s.req.param(),l=`http://www.playno1.com/portal.php?mod=list&catid=${c}`,u=await n(l,{cookieJar:i}),d=o(u.data),f=d(`.fire_float`).toArray().filter(e=>d(e).text().length).map(t=>(t=d(t),{title:t.find(`h3 a`).attr(`title`),link:t.find(`h3 a`).attr(`href`),pubDate:r(e(t.find(`.fire_left`).text()),8),author:t.find(`.fire_right`).text().match(/作者：(.*)\s*\|/)[1].trim()}));return f=await a(f,t),{title:d(`head title`).text(),link:l,item:f,language:`zh-TW`}}export{s as route};
