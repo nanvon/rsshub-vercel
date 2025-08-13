@@ -1,5 +1,0 @@
-import"./esm-shims-CGUM9TC6.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import"./dist-CRTt8uUM.js";import"./parse-date-Bgabdhlb.js";import"./ofetch-BHWobzJG.js";import"./timezone-BrNu6iXe.js";import{common_config_default as e}from"./common-config-DTxMM2z-.js";const t={path:`/seminars/:period`,categories:[`study`],example:`/aiea/seminars/upcoming`,parameters:{period:`Time frame`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`Seminar Series`,maintainers:[`zxx-457`],handler:n,description:`| Time frame |
-| ---------- |
-| upcoming   |
-| past       |
-| both       |`};async function n(t){let n=`http://www.aiea.org/0504`,r=t.req.param(`period`)??``,i=`n`;switch(r){case`upcoming`:i=`1`;break;case`past`:i=`2`;break;case`both`:i=`n`;break;default:break}return await e({link:n,url:n,title:`%title%`,params:{title:`AIEA Seminars`},item:{item:`.seminar-contents .seminar-partWrap:nth-child(${i}) > .seminar-list`,title:`$('.seminar-list-title > span').text()`,link:`$('a[href^="/0504"]').attr('href')`,description:`$('.seminar-list .txt > .title').text()`}})}export{t as route};

@@ -1,7 +1,0 @@
-import"./esm-shims-CGUM9TC6.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import{parseDate as e}from"./parse-date-D4osZfpm.js";import"./dist-0j_z2rfc.js";import"./helpers-nWIDkd0K.js";import{cache_default as t}from"./cache-GwMhal7i.js";import"./ofetch-ZUQ1sEMc.js";import{got_default as n}from"./got-CB83B8oA.js";import{timezone as r}from"./timezone-BrNu6iXe.js";import{load as i}from"cheerio";const a=`https://yz.chsi.com.cn`,o={path:`/kyzx/:type`,categories:[`study`],example:`/chsi/kyzx/fstj`,parameters:{type:` type 见下表，亦可在网站 URL 找到`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`yz.chsi.com.cn/kyzx/:type`]}],name:`考研资讯`,maintainers:[`yanbot-team`],handler:s,description:`| \`:type\` | 专题名称 |
-| ------- | -------- |
-| fstj    | 复试调剂 |
-| kydt    | 考研动态 |
-| zcdh    | 政策导航 |
-| kyrw    | 考研人物 |
-| jyxd    | 经验心得 |`};async function s(o){let{type:s}=o.req.param(),c=await n(`${a}/kyzx/${s}`),l=i(c.data),u=l(`.bread-nav .location a`).last().text()||`考研资讯`,d=l(`ul.news-list`).children(),f=await Promise.all(d.map((o,s)=>{s=l(s);let c=s.find(`a`).text(),u=s.find(`.span-time`).text(),d=s.find(`a`).attr(`href`),f=``;return f=d.startsWith(`http`)?d:a+d,t.tryGet(f,async()=>{let t=``;if(f){let e=await n(f),r=i(e.data);t=r(`#article_dnull`).html().trim()}else t=c;return{title:c,link:f,pubDate:r(e(u),8),description:t}})}));return{title:`中国研究生招生信息网 - ${u}`,link:`${a}/kyzx/${s}/`,description:`中国研究生招生信息网 - ${u}`,item:f}}export{o as route};
