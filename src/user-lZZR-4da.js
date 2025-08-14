@@ -1,5 +1,0 @@
-import"./esm-shims-DtWyl6zt.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import"./dist-CKN2M7CD.js";import"./helpers-DzX-lcQO.js";import"./ofetch-CWsaZ4vY.js";import{got_default as e}from"./got-RSSJ34bj.js";const t=async t=>{let{data:n}=await e.get(`https://curiouscat.me/api/v2/profile?username=`+t);return n},n={path:`/user/:id`,radar:[{source:[`curiouscat.live/:id`]}],name:`Unknown`,maintainers:[`lucasew`],handler:r};async function r(e){let n=e.req.param(`id`),r=n,i=await t(r),a=i.posts.map(e=>{let t=e.senderData.id?e.senderData.username:`Anonymous`,n=`@${t}: ${e.comment}`,i=`https://curiouscat.live/${r}/post/${e.id}`,a=e.media?`<img src="${e.media.img}"></img>`:``,o=`${e.comment}<br><br>
-        ${e.reply}
-        ${a}
-        <br>
-        Likes: ${e.likes}`,s=new Date(e.timestamp*1e3);return{author:t,link:i,title:n,description:o,pubDate:s}});return{title:`CuriousCat - ${r}`,link:`https://curiouscat.live/${r}`,description:`Questions answered by ${r} using CuriousCat`,language:i.lang,item:a}}export{n as route};
