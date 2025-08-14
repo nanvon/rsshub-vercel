@@ -1,0 +1,8 @@
+import"./esm-shims-DtWyl6zt.js";import"./config-C9m9eBw5.js";import"./logger-CC3afzWM.js";import"./dist-CKN2M7CD.js";import"./helpers-DzX-lcQO.js";import{cache_default as e}from"./cache-Sft5n2jg.js";import{parseDate as t}from"./parse-date-Bgabdhlb.js";import{ofetch_default as n}from"./ofetch-CWsaZ4vY.js";import{got_default as r}from"./got-RSSJ34bj.js";import{load as i}from"cheerio";const a={xsyg:{title:`学术预告`,tag:`30284`},jytz:{title:`教研通知`,tag:`30307`},hwxx:{title:`海外学习`,tag:`hwxx`},swtz:{title:`事务通知`,tag:`30283`}},o={path:`/gzic/notice/:category?`,categories:[`university`],example:`/scut/gzic/notice/swtz`,parameters:{category:"通知分类，默认为 `swtz`"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!0,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`广州国际校区 - 通知公告`,maintainers:[`gdzhht`],handler:s,description:`| 学术预告 | 教研通知 | 海外学习 | 事务通知 |
+| -------- | -------- | -------- | -------- |
+| xsyg     | jytz     | hwxx     | swtz     |
+
+::: warning
+由于学校网站对非大陆 IP 的访问存在限制，可能需自行部署。
+部分通知详情页可能会被删除（返回 404），或在校园网外无法访问。
+:::`};async function s(o){let s=`https://www2.scut.edu.cn`,c=o.req.param(`category`)||`swtz`,l=a[c],u=`${s}/gzic/${l.tag}/list.htm`,{data:d}=await r(u),f=i(d),p=f(`.right-nr .row .col-lg-4`).toArray().map(e=>{e=f(e);let n=e.find(`.thr-box a`),r=e.find(`.thr-box a span`);return{title:e.find(`.thr-box a p`).text(),link:n.attr(`href`)?.startsWith(`http`)?n.attr(`href`):`${s}${n.attr(`href`)}`,pubDate:t(r.text())}}),m=await Promise.all(p.map(t=>e.tryGet(t.link,async()=>{try{let e=await n(t.link),r=i(e);t.description=r(`div.wp_articlecontent`).html()}catch(e){if(e.response&&e.response.status===404)t.description=``;else throw e}return t})));return{title:`华南理工大学广州国际校区 - ${l.title}`,link:u,item:m}}export{o as route};
