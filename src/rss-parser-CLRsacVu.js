@@ -1,1 +1,0 @@
-import{config as e}from"./config-C9m9eBw5.js";import t from"rss-parser";const n=new t({customFields:{item:[`magnet`]},headers:{"User-Agent":e.ua}});var r=n;export{r as rss_parser_default};
