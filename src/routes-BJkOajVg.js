@@ -6492,7 +6492,7 @@ These feed do not include boosts (a.k.a. reblogs). RSSHub provides a feed for us
 
 | 最新     | 新闻 | 公告   | 活动     |
 | -------- | ---- | ------ | -------- |
-| news-all | news | notice | activity |`,location:`zzz/news.ts`,module:()=>import(`./news-Cd0qv0Vd.js`)}},name:`米哈游`,url:`genshin.hoyoverse.com`,lang:`zh-CN`},mindmeister:{routes:{"/:category?/:language?":{path:`/:category?/:language?`,categories:[`study`],example:`/mindmeister/mind-map-examples`,parameters:{category:"Categories, see the table below, `mind-map-examples` by default",language:"Languages, see the table below, `en` by default"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`Public Maps`,maintainers:[`TonyRL`],description:`| Categories    | parameter         |
+| news-all | news | notice | activity |`,location:`zzz/news.ts`,module:()=>import(`./news-B8EdSNR3.js`)}},name:`米哈游`,url:`genshin.hoyoverse.com`,lang:`zh-CN`},mindmeister:{routes:{"/:category?/:language?":{path:`/:category?/:language?`,categories:[`study`],example:`/mindmeister/mind-map-examples`,parameters:{category:"Categories, see the table below, `mind-map-examples` by default",language:"Languages, see the table below, `en` by default"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`Public Maps`,maintainers:[`TonyRL`],description:`| Categories    | parameter         |
 | ------------- | ----------------- |
 | Featured Map  | mind-map-examples |
 | Business      | business          |
