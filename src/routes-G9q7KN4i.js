@@ -6484,7 +6484,7 @@ These feed do not include boosts (a.k.a. reblogs). RSSHub provides a feed for us
 
 | 最新     | 新闻 | 公告   | 活动     |
 | -------- | ---- | ------ | -------- |
-| news-all | news | notice | activity |`,location:`sr/news.ts`,module:()=>import(`./news-Dw1KmtZL.js`)},"/ys/:location?/:category?":{path:`/ys/:location?/:category?`,categories:[`game`],example:`/mihoyo/ys`,parameters:{location:"区域，可选 `main`（简中）或 `zh-tw`（繁中）",category:`分类，见下表，默认为最新`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`genshin.hoyoverse.com/:location/news`],target:`/ys/:location`}],name:`原神`,maintainers:[`nczitzk`],description:`#### 新闻 {#mi-ha-you-yuan-shen-xin-wen}
+| news-all | news | notice | activity |`,location:`sr/news.ts`,module:()=>import(`./news-QZMGbY4I.js`)},"/ys/:location?/:category?":{path:`/ys/:location?/:category?`,categories:[`game`],example:`/mihoyo/ys`,parameters:{location:"区域，可选 `main`（简中）或 `zh-tw`（繁中）",category:`分类，见下表，默认为最新`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`genshin.hoyoverse.com/:location/news`],target:`/ys/:location`}],name:`原神`,maintainers:[`nczitzk`],description:`#### 新闻 {#mi-ha-you-yuan-shen-xin-wen}
 
 | 最新   | 新闻 | 公告   | 活动     |
 | ------ | ---- | ------ | -------- |
