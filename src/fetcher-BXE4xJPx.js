@@ -1,0 +1,1 @@
+import{cache_default as e}from"./cache-DNP0KCHb.js";import{rofetch as t}from"./ofetch-Dnmc-sKl.js";function n(n,r){return e.tryGet(n,async()=>{let e=await t(n);return r(e)})}export{n as fetchDataItemCached};
