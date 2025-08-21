@@ -1,0 +1,3 @@
+import"./esm-shims-DtWyl6zt.js";import"./config-CT-9jq-j.js";import"./logger-BsClR5PH.js";import"./dist-BrnquCU2.js";import"./helpers-DzX-lcQO.js";import"./cache-DNP0KCHb.js";import"./parse-date-Bgabdhlb.js";import"./ofetch-Of9UBhau.js";import"./got-Cw3q2eEq.js";import"./timezone-BrNu6iXe.js";import{handler as e}from"./common-Dy5fo8Al.js";const t={name:`主题`,path:[`/topics/:id`],example:`/cnbeta/topics/453`,maintainers:[`cczhong11`,`nczitzk`],parameters:{id:`主题 id，可在对应主题页的 URL 中找到`},radar:[{source:[`cnbeta.com.tw/topics/:id`],target:e=>`/cnbeta/topics/${e.id.replace(`.htm`,``)}`}],handler:e,url:`cnbeta.com.tw`,description:`::: tip
+完整的主题列表参见 [主题列表](https://www.cnbeta.com.tw/topics.htm)
+:::`};export{t as route};
