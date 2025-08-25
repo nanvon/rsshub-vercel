@@ -1,1 +1,0 @@
-import{__dirname as e,init_esm_shims as t}from"./esm-shims-DtWyl6zt.js";import{art as n}from"./render-sowsPyZZ.js";import r from"node:path";t();const i=(t,i)=>n(r.join(e,`templates/courseDesc-4e7c77df.art`),{picurl:t,desc:i});var a={courseDesc:i};export{a as utils_default};

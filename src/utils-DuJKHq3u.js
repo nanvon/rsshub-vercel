@@ -1,1 +1,0 @@
-import{config as e}from"./config-CT-9jq-j.js";import{ConfigNotFoundError as t}from"./config-not-found-2m672-Jl.js";function n(n){if(!e.discourse.config[n.req.param(`configId`)])throw new t(`Discourse RSS is disabled due to the lack of <a href="https://docs.rsshub.app/deploy/">relevant config</a>`);return e.discourse.config[n.req.param(`configId`)]}export{n as getConfig};

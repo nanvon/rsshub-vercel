@@ -1,1 +1,0 @@
-var e=class extends Error{name=`RequestInProgressError`};export{e as RequestInProgressError};
