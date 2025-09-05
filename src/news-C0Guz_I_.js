@@ -1,0 +1,5 @@
+import"./esm-shims-Dqvxr0BZ.js";import"./config-BpwDbAkH.js";import"./logger-B3QfaIfn.js";import"./dist-BYIKqG8W.js";import"./helpers-DzX-lcQO.js";import"./cache-BWStd97H.js";import"./parse-date-Bgabdhlb.js";import"./ofetch-CSKgrsrO.js";import"./got-CtVGR9YK.js";import"./timezone-BrNu6iXe.js";import{handler as e}from"./common-CSucOF8b.js";const t={name:`News`,maintainers:[`Rjnishant530`],path:[`/:category`],example:`/dnaindia/headlines`,parameters:{category:`Find it in the URL, or tables below`},radar:[{source:[`www.dnaindia.com/:category`]}],handler:e,url:`www.dnaindia.com`,description:`Categories:
+
+| Headlines | Explainer | India | Entertainment | Sports | Viral | Lifestyle | Education | Business | World |
+| --------- | --------- | ----- | ------------- | ------ | ----- | --------- | --------- | -------- | ----- |
+| headlines | explainer | india | entertainment | sports | viral | lifestyle | education | business | world |`};export{t as route};
