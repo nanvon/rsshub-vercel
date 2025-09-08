@@ -1,1 +1,0 @@
-import{got_default as e}from"./got-CtVGR9YK.js";const t=async(t=[])=>{let n=await e(`https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=`+t.join(`,`));return n.data};export{t as getData};
