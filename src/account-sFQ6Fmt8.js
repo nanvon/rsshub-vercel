@@ -1,4 +1,0 @@
-import"./esm-shims-Dqvxr0BZ.js";import"./config-BpwDbAkH.js";import"./logger-B3QfaIfn.js";import"./ofetch-TsvCL7Kz.js";import"./cache-CzcusEyX.js";import"./render-DE4LRFBD.js";import"./parse-date-DHsdom8D.js";import{handler as e}from"./common-C31TQntL.js";const t={path:`/account/main/1`,parameters:{id:`分类 id，见下表，可在对应分类页 URL 中找到`},name:`界面号`,example:`/jiemian/account/main/1`,maintainers:[`nczitzk`],handler:e,description:`| [财经号](https://www.jiemian.com/account/main/1.html) | [城市号](https://www.jiemian.com/account/main/2.html) | [媒体号](https://www.jiemian.com/account/main/3.html) |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| 1                                                     | 2                                                     | 3                                                     |
-`};export{t as route};
