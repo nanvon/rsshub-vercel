@@ -1,1 +1,1 @@
-var e=class extends Error{name=`CaptchaError`},t=e;export{t as captcha_default};
+var e=class extends Error{name=`CaptchaError`};export{e as captcha_default};

@@ -1,1 +1,1 @@
-var e=class extends Error{name=`RejectError`},t=e;export{t as reject_default};
+var e=class extends Error{name=`RejectError`};export{e as reject_default};
