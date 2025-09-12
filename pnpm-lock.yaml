@@ -2812,8 +2812,8 @@ packages:
   bare-events@2.6.1:
     resolution: {integrity: sha512-AuTJkq9XmE6Vk0FJVNq5QxETrSA/vKHarWVBG5l/JbdCL1prJemiyJqUS0jrlXO0MftuPq4m3YVYhoNc5+aE/g==}
 
-  bare-fs@4.4.3:
-    resolution: {integrity: sha512-mdKRIf00qVjEWQHwJ27PNWDSAuFkg0Q905HtKgV6Rs18tG7vlaGZy1H1UsfknFc/cpkNfFcRrLHE9a6crj1Mig==}
+  bare-fs@4.4.4:
+    resolution: {integrity: sha512-Q8yxM1eLhJfuM7KXVP3zjhBvtMJCYRByoTT+wHXjpdMELv0xICFJX+1w4c7csa+WZEOsq4ItJ4RGwvzid6m/dw==}
     engines: {bare: '>=1.16.0'}
     peerDependencies:
       bare-buffer: '*'
@@ -4780,8 +4780,8 @@ packages:
     peerDependencies:
       undici: ^6
 
-  node-releases@2.0.20:
-    resolution: {integrity: sha512-7gK6zSXEH6neM212JgfYFXe+GmZQM+fia5SsusuBIUgnPheLFBmIPhtFoAQRj8/7wASYQnbDlHPVwY0BefoFgA==}
+  node-releases@2.0.21:
+    resolution: {integrity: sha512-5b0pgg78U3hwXkCM8Z9b2FJdPZlr9Psr9V2gQPESdGHqbntyFJKFW4r5TeWGFzafGY3hzs1JC62VEQMbl1JFkw==}
 
   nodemailer@7.0.3:
     resolution: {integrity: sha512-Ajq6Sz1x7cIK3pN6KesGTah+1gnwMnx5gKl3piQlQQE/PwyJ4Mbc8is2psWYxK3RJTVeqsDaCv8ZzXLCDHMTZw==}
@@ -5282,15 +5282,18 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rolldown-plugin-dts@0.16.3:
-    resolution: {integrity: sha512-ePFDr92rCKCqaVhEOFT9krvMWjn6G1EOvI93Fc8JcJZRSYdYpdwm93a3gtCdxXGYkG+JyD3gRO1JRdtZUsrbNw==}
+  rolldown-plugin-dts@0.16.4:
+    resolution: {integrity: sha512-kA8AehhXE1HHd+PoZzWOjXffN1BIudAPU0VZnEMBck0pApcF9VBjcyfze3z0uGAbueFXXkEp1NdBz2QHehR1rw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
+      '@ts-macro/tsc': ^0.3.6
       '@typescript/native-preview': '>=7.0.0-dev.20250601.1'
       rolldown: ^1.0.0-beta.9
       typescript: ^5.0.0
       vue-tsc: ~3.0.3
     peerDependenciesMeta:
+      '@ts-macro/tsc':
+        optional: true
       '@typescript/native-preview':
         optional: true
       typescript:
@@ -8705,7 +8708,7 @@ snapshots:
   bare-events@2.6.1:
     optional: true
 
-  bare-fs@4.4.3:
+  bare-fs@4.4.4:
     dependencies:
       bare-events: 2.6.1
       bare-path: 3.0.0
@@ -8782,7 +8785,7 @@ snapshots:
     dependencies:
       caniuse-lite: 1.0.30001741
       electron-to-chromium: 1.5.218
-      node-releases: 2.0.20
+      node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.25.4)
 
   buffer-crc32@0.2.13: {}
@@ -10944,7 +10947,7 @@ snapshots:
     transitivePeerDependencies:
       - utf-8-validate
 
-  node-releases@2.0.20: {}
+  node-releases@2.0.21: {}
 
   nodemailer@7.0.3: {}
 
@@ -11499,7 +11502,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rolldown-plugin-dts@0.16.3(rolldown@1.0.0-beta.37)(typescript@5.9.2):
+  rolldown-plugin-dts@0.16.4(rolldown@1.0.0-beta.37)(typescript@5.9.2):
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4
@@ -11811,7 +11814,7 @@ snapshots:
       pump: 3.0.3
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 4.4.3
+      bare-fs: 4.4.4
       bare-path: 3.0.0
     transitivePeerDependencies:
       - bare-buffer
@@ -11992,7 +11995,7 @@ snapshots:
       empathic: 2.0.0
       hookable: 5.5.3
       rolldown: 1.0.0-beta.37
-      rolldown-plugin-dts: 0.16.3(rolldown@1.0.0-beta.37)(typescript@5.9.2)
+      rolldown-plugin-dts: 0.16.4(rolldown@1.0.0-beta.37)(typescript@5.9.2)
       semver: 7.7.2
       tinyexec: 1.0.1
       tinyglobby: 0.2.15
@@ -12001,6 +12004,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
     transitivePeerDependencies:
+      - '@ts-macro/tsc'
       - '@typescript/native-preview'
       - oxc-resolver
       - supports-color
