@@ -1,0 +1,11 @@
+import"./esm-shims-DE2PJqdr.js";import"./config-CVBRPN4O.js";import"./logger-BvonkID1.js";import"./ofetch-CJF2SF6b.js";import"./helpers-gUVC02jt.js";import{cache_default as e}from"./cache-Dfid4xgQ.js";import{parseDate as t}from"./parse-date-DHsdom8D.js";import{got_default as n}from"./got-Baw2Nbdf.js";import{load as r}from"cheerio";const i={path:`/news-room/:category?/:language?`,categories:[`government`],example:`/who/news-room/feature-stories`,parameters:{category:`Category, see below, Feature stories by default`,language:`Language, see below, English by default`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`who.int/news-room/:type`],target:`/news-room/:type`}],name:`Newsroom`,maintainers:[`LogicJake`,`nczitzk`],handler:a,url:`who.int/news`,description:`Category
+
+| Feature stories | Commentaries |
+| --------------- | ------------ |
+| feature-stories | commentaries |
+
+  Language
+
+| English | العربية | 中文 | Français | Русский | Español | Português |
+| ------- | ------- | ---- | -------- | ------- | ------- | --------- |
+| en      | ar      | zh   | fr       | ru      | es      | pt        |`};async function a(i){let a=i.req.param(`category`)??`feature-stories`,o=i.req.param(`language`)??``,s=`https://www.who.int`,c=`${s}/${o?`${o}/`:``}news-room/${a}`,l=await n({method:`get`,url:c}),u=r(l.data),d=u(`.list-view--item a`);d=d.length===0?(await n({method:`get`,url:`${s}/api/hubs/${a.replaceAll(`-`,``)}?sf_culture=zh&$orderby=PublicationDateAndTime%20desc&$select=Title,PublicationDateAndTime,ItemDefaultUrl&$top=30`})).data.value.map(e=>({title:e.Title,link:`${c}/detail/${e.ItemDefaultUrl}`,pubDate:t(e.PublicationDateAndTime)})):d.toArray().map(e=>(e=u(e),{link:`${e.attr(`href`).indexOf(`http`)===0?``:s}${e.attr(`href`)}`}));let f=await Promise.all(d.map(i=>e.tryGet(i.link,async()=>{let e=await n({method:`get`,url:i.link}),a=e.data.match(/"headline":"(.*)","description":"(.*)","datePublished":"(.*)","image"/);return a?(i.title=a[1],i.description=a[2],i.pubDate=t(a[3])):i.description=r(e.data)(`.sf-content-block`).html(),i})));return{title:`${u(`meta[property="og:title"]`).attr(`content`)} - WHO`,link:c,item:f}}export{i as route};
