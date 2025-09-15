@@ -2601,6 +2601,10 @@ packages:
     resolution: {integrity: sha512-vQ2FZaxJpydjSZJKiSW/LJsabFFvV7KgLC5DiLhkBcykhQj8iK9BOaDmQt74nnKdLvceM5xmhaTF+pLekrxEkw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/types@8.44.0':
+    resolution: {integrity: sha512-ZSl2efn44VsYM0MfDQe68RKzBz75NPgLQXuGypmym6QVOWL5kegTZuZ02xRAT9T+onqvM6T8CdQk0OwYMB6ZvA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/typescript-estree@8.43.0':
     resolution: {integrity: sha512-7Vv6zlAhPb+cvEpP06WXXy/ZByph9iL6BQRBDj4kmBsW98AqEeQHlj/13X+sZOrKSo9/rNKH4Ul4f6EICREFdw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -8248,7 +8252,7 @@ snapshots:
   '@stylistic/eslint-plugin@5.3.1(eslint@9.35.0(jiti@2.5.1))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.35.0(jiti@2.5.1))
-      '@typescript-eslint/types': 8.43.0
+      '@typescript-eslint/types': 8.44.0
       eslint: 9.35.0(jiti@2.5.1)
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
@@ -8499,6 +8503,8 @@ snapshots:
       - supports-color
 
   '@typescript-eslint/types@8.43.0': {}
+
+  '@typescript-eslint/types@8.44.0': {}
 
   '@typescript-eslint/typescript-estree@8.43.0(typescript@5.9.2)':
     dependencies:
