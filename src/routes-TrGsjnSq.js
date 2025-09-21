@@ -5489,7 +5489,6 @@ To subscribe to [Metals Forcus](https://jbma.net/cat_report/metals-forcus/), whe
   <summary>More filters</summary>
 
 | Name                                                                                          | ID                                                                                                                  |
-
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | [Metals Forcus](https://jbma.net/cat_report/metals-forcus/)                                   | [cat_report/metals-forcus](https://rsshub.app/jbma/report/cat_report/metals-forcus)                                 |
 | [WPIC](https://jbma.net/cat_report/wpic/)                                                     | [cat_report/wpic](https://rsshub.app/jbma/report/cat_report/wpic)                                                   |
@@ -5522,7 +5521,6 @@ To subscribe to [Metals Forcus](https://jbma.net/cat_report/metals-forcus/), whe
   <summary>更多分类</summary>
 
 | 名称                                                                                          | ID                                                                                                                  |
-
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | [Metals Forcus](https://jbma.net/cat_report/metals-forcus/)                                   | [cat_report/metals-forcus](https://rsshub.app/jbma/report/cat_report/metals-forcus)                                 |
 | [WPIC](https://jbma.net/cat_report/wpic/)                                                     | [cat_report/wpic](https://rsshub.app/jbma/report/cat_report/wpic)                                                   |
