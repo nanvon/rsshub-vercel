@@ -3170,8 +3170,8 @@ packages:
     resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
     engines: {node: '>= 6'}
 
-  cssstyle@5.3.0:
-    resolution: {integrity: sha512-RveJPnk3m7aarYQ2bJ6iw+Urh55S6FzUiqtBq+TihnTDP4cI8y/TYDqGOyqgnG1J1a6BxJXZsV9JFSTulm9Z7g==}
+  cssstyle@5.3.1:
+    resolution: {integrity: sha512-g5PC9Aiph9eiczFpcgUhd9S4UUO3F+LHGRIi5NUMZ+4xtoIYbHNZwZnWA2JsFGe8OU8nl4WyaEFiZuGuxlutJQ==}
     engines: {node: '>=20'}
 
   currency-symbol-map@5.1.0:
@@ -5295,8 +5295,8 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rolldown-plugin-dts@0.16.6:
-    resolution: {integrity: sha512-OPQKAft45efpjU3ppcI9GyRHAT0otTIdMv0gcoBlcR9B3QssZvTFH6zbT3Ij5x+7ymX5TCPyHb+VIkRYTJrTaA==}
+  rolldown-plugin-dts@0.16.7:
+    resolution: {integrity: sha512-9iDzS4MHXMyieisFbWxuz96i/idGJNpvWILqCH06mrEZvn8Q2el3Q63xxjOt7HJjTOUNFhB1isvZFy4dA87lPQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       '@ts-macro/tsc': ^0.3.6
@@ -5642,8 +5642,8 @@ packages:
   tldts-core@6.1.86:
     resolution: {integrity: sha512-Je6p7pkk+KMzMv2XXKmAE3McmolOQFdxkKw0R8EYNr7sELW46JqnNeTX8ybPiQgvg1ymCoF8LXs5fzFaZvJPTA==}
 
-  tldts-core@7.0.14:
-    resolution: {integrity: sha512-viZGNK6+NdluOJWwTO9olaugx0bkKhscIdriQQ+lNNhwitIKvb+SvhbYgnCz6j9p7dX3cJntt4agQAKMXLjJ5g==}
+  tldts-core@7.0.15:
+    resolution: {integrity: sha512-YBkp2VfS9VTRMPNL2PA6PMESmxV1JEVoAr5iBlZnB5JG3KUrWzNCB3yNNkRa2FZkqClaBgfNYCp8PgpYmpjkZw==}
 
   tldts@6.1.86:
     resolution: {integrity: sha512-WMi/OQ2axVTf/ykqCQgXiIct+mSQDFdH2fkwhPwgEwvJ1kSzZRiinb0zF2Xb8u4+OqPChmyI6MEu4EezNJz+FQ==}
@@ -9107,7 +9107,7 @@ snapshots:
 
   css-what@6.2.2: {}
 
-  cssstyle@5.3.0(postcss@8.5.6):
+  cssstyle@5.3.1(postcss@8.5.6):
     dependencies:
       '@asamuzakjp/css-color': 4.0.4
       '@csstools/css-syntax-patches-for-csstree': 1.0.14(postcss@8.5.6)
@@ -10386,7 +10386,7 @@ snapshots:
   jsdom@27.0.0(bufferutil@4.0.9)(postcss@8.5.6)(utf-8-validate@5.0.10):
     dependencies:
       '@asamuzakjp/dom-selector': 6.5.5
-      cssstyle: 5.3.0(postcss@8.5.6)
+      cssstyle: 5.3.1(postcss@8.5.6)
       data-urls: 6.0.0
       decimal.js: 10.6.0
       html-encoding-sniffer: 4.0.0
@@ -11535,7 +11535,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rolldown-plugin-dts@0.16.6(rolldown@1.0.0-beta.38)(typescript@5.9.2):
+  rolldown-plugin-dts@0.16.7(rolldown@1.0.0-beta.38)(typescript@5.9.2):
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4
@@ -11944,7 +11944,7 @@ snapshots:
 
   tldts-core@6.1.86: {}
 
-  tldts-core@7.0.14: {}
+  tldts-core@7.0.15: {}
 
   tldts@6.1.86:
     dependencies:
@@ -11952,7 +11952,7 @@ snapshots:
 
   tldts@7.0.14:
     dependencies:
-      tldts-core: 7.0.14
+      tldts-core: 7.0.15
 
   to-no-case@1.0.2: {}
 
@@ -12033,7 +12033,7 @@ snapshots:
       empathic: 2.0.0
       hookable: 5.5.3
       rolldown: 1.0.0-beta.38
-      rolldown-plugin-dts: 0.16.6(rolldown@1.0.0-beta.38)(typescript@5.9.2)
+      rolldown-plugin-dts: 0.16.7(rolldown@1.0.0-beta.38)(typescript@5.9.2)
       semver: 7.7.2
       tinyexec: 1.0.1
       tinyglobby: 0.2.15
