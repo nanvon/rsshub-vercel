@@ -1,0 +1,13 @@
+import"./esm-shims-B6VgfGYP.js";import"./config-CVBRPN4O.js";import"./logger-BvonkID1.js";import"./ofetch-CHIwZNTj.js";import"./helpers-gUVC02jt.js";import{got_default as e}from"./got-BXZNsAGk.js";const t={path:`/version/:versionType?/:linkType?`,categories:[`game`],example:`/minecraft/version`,parameters:{versionType:"Game version type, `all` by default",linkType:"Link added to feed, `official` by default"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`minecraft.net/`]}],name:`Java Game Update`,maintainers:[`TheresaQWQ`,`xtexChooser`],handler:i,url:`minecraft.net/`,description:`
+| Version                    | versionType |
+| -------------------------- | ----------- |
+| 正式版                     | release     |
+| 快照                       | snapshot    |
+| Alpha 及更早的版本         | old_alpha  |
+| Beta 版                    | old_beta   |
+| Target                     | linkType    |
+| -------------------------- | --------    |
+| minecraft.net              | official    |
+| 英文 Minecraft Wiki 版本页 | enwiki      |
+| 中文 Minecraft Wiki 版本页 | zhwiki      |
+`,zh:{name:`Java版游戏更新`}},n={release:`正式版`,snapshot:`快照`,old_alpha:`Alpha及更早的版本`,old_beta:`Beta版`},r={official:()=>`https://www.minecraft.net`,enwiki:e=>{let t=e.id;return e.type===`old_beta`&&t.startsWith(`b`)&&(t=`Beta ${t.slice(1)}`),e.type===`old_alpha`&&(t.startsWith(`a`)?t=`Alpha ${t.slice(1)}`:t.startsWith(`c`)?t=`Classic ${t.slice(1)}`:t.startsWith(`inf-`)?t=`Infdev`:t.startsWith(`rd-`)&&(t=`pre-Classic ${t}`)),`https://minecraft.wiki/w/Java Edition ${t}`},zhwiki:e=>{let t=e.id;return e.type===`release`&&(t=`Java版${t}`),e.type===`old_beta`&&t.startsWith(`b`)&&(t=`Java版Beta ${t.slice(1)}`),e.type===`old_alpha`&&(t.startsWith(`a`)?t=`Java版Alpha ${t.slice(1)}`:t.startsWith(`c`)?t=`Java版Classic ${t.slice(1)}`:t.startsWith(`inf-`)?t=`Java版Infdev`:t.startsWith(`rd-`)&&(t=`Java版pre-Classic ${t}`)),`https://zh.minecraft.wiki/w/${t}`}};async function i(t){let i=t?.req.query(`mcmanifest`)??`https://piston-meta.mojang.com/mc/game/version_manifest_v2.json`,a=(await e({method:`get`,url:i,responseType:`json`})).data.versions,o=t?.req.param(`versionType`)??`all`,s=t?.req.param(`linkType`)??`official`,c=r[s]??r.official;o!==`all`&&(a=a.filter(e=>e.type===o));let l=`Minecraft Java版${o===`all`?``:n[o]??o}游戏更新`;return{title:l,link:`https://www.minecraft.net/`,description:l,item:a.map(e=>({title:`${e.id} ${n[e.type]||``}更新`,description:`${e.id} ${n[e.type]||``}更新`,pubDate:new Date(e.releaseTime).toUTCString(),link:c(e),guid:e.id+e.type}))}}export{t as route};
