@@ -1,6 +1,0 @@
-import"./esm-shims-B6VgfGYP.js";import"./config-CVBRPN4O.js";import"./logger-BvonkID1.js";import"./ofetch-CHIwZNTj.js";import"./helpers-gUVC02jt.js";import{parseDate as e}from"./parse-date-DHsdom8D.js";import{got_default as t}from"./got-BXZNsAGk.js";import{load as n}from"cheerio";const r={path:`/changelog/:id`,categories:[`program-update`],example:`/oo-software/changelog/shutup10`,parameters:{id:`Software id, see below, shutup10 by default, can be found in URL`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`Changelog`,maintainers:[`nczitzk`],handler:i,description:`| Software        | Id          |
-| --------------- | ----------- |
-| O&O ShutUp10++ | shutup10    |
-| O&O AppBuster  | ooappbuster |
-| O&O Lanytix    | oolanytix   |
-| O&O DeskInfo   | oodeskinfo  |`};async function i(r){let i=`https://www.oo-software.com/en/${r.req.param(`id`)??`shutup10`}/changelog`,a=await t({method:`get`,url:i}),o=n(a.data),s=o(`.content h4`).toArray().map(t=>{t=o(t);let n=t.text();return{title:n,link:`${i}#${n.split(` – `)[0]}`,description:t.next().html(),pubDate:e(n.match(/released (on )?(.*)$/)[2],`MMMM DD, YYYY`)}});return s[0].enclosure_url=o(`.banner-inlay`).find(`a`).attr(`href`),{title:o(`title`).text(),link:i,item:s}}export{r as route};

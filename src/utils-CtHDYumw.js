@@ -1,1 +1,0 @@
-import{cache_default as e}from"./cache-Dfid4xgQ.js";import{got_default as t}from"./got-BXZNsAGk.js";import{load as n}from"cheerio";const r=r=>Promise.all(r.map(r=>e.tryGet(r.link,async()=>{let e=await t.post(r.link);return r.description=n(e.data)(`div.xxy_text`).html(),r})));export{r as processItems};
