@@ -9386,7 +9386,7 @@ Language Code
 
 | 发布时间 | 回复时间  | 默认排序 |
 | -------- | --------- | ------- |
-| created  | commented | default |`,location:`topic.ts`,module:()=>import(`./topic-a4H-qfKp.js`)}},name:`TapTap`,apiRoutes:{},url:`www.taptap.io`,description:`::: warning
+| created  | commented | default |`,location:`topic.ts`,module:()=>import(`./topic-CiwkmPVg.js`)}},name:`TapTap`,apiRoutes:{},url:`www.taptap.io`,description:`::: warning
 由于区域限制，需要在有国内 IP 的机器上自建才能正常获取 RSS。而对于《TapTap 国际版》则需要部署在具有海外出口的 IP 上才可正常获取 RSS。
 :::`,lang:`zh-CN`},tass:{routes:{"/:category?":{path:`/:category?`,categories:[`traditional-media`],example:`/tass/politics`,parameters:{category:"Category, can be found in URL, `politics` by default"},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`tass.com/:category`],target:`/:category`}],name:`News`,maintainers:[`TonyRL`],description:`| Russian Politics & Diplomacy | World | Business & Economy | Military & Defense | Science & Space | Emergencies | Society & Culture | Press Review | Sports |
 | ---------------------------- | ----- | ------------------ | ------------------ | --------------- | ----------- | ----------------- | ------------ | ------ |
