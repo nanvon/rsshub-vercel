@@ -1,7 +1,0 @@
-import"./esm-shims-BGJi2y--.js";import{config as e}from"./config-CVBRPN4O.js";import"./logger-BvonkID1.js";import{ofetch_default as t}from"./ofetch-CISb_5Uo.js";import{parseDate as n}from"./parse-date-DHsdom8D.js";import{load as r}from"cheerio";const i={path:`/tag/:tag/:type`,categories:[`reading`],example:`/asianfanfics/tag/milklove/N`,parameters:{tag:`标签`,type:`排序类型`},name:`标签`,maintainers:[`KazooTTT`],radar:[{source:[`www.asianfanfics.com/browse/tag/:tag/:type`],target:`/tag/:tag/:type`}],description:`匹配asianfanfics标签，支持排序类型：
-- L: Latest 最近更新
-- N: Newest 最近发布
-- O: Oldest 最早发布
-- C: Completed 已完成
-- OS: One Shots 短篇
-`,handler:o},a={L:`最近更新`,N:`最近发布`,O:`最早发布`,C:`已完成`,OS:`短篇`};async function o(i){let o=i.req.param(`tag`),s=i.req.param(`type`);if(!s||![`L`,`N`,`O`,`C`,`OS`].includes(s))throw Error(`无效的排序类型`);let c=`https://www.asianfanfics.com/browse/tag/${o}/${s}`,l=await t(c,{headers:{"user-agent":e.trueUA,Referer:`https://www.asianfanfics.com/`}}),u=r(l),d=u(`.primary-container .excerpt`).toArray().filter(e=>u(e).find(`.excerpt__title a`).length>0).map(e=>{let t=u(e),r=t.find(`.excerpt__title a`).text(),i=`https://www.asianfanfics.com`+t.find(`.excerpt__title a`).attr(`href`),a=t.find(`.excerpt__meta__name a`).text().trim(),o=n(t.find(`time`).attr(`datetime`)||``),s=t.find(`.excerpt__text`).html();return{title:r,link:i,author:a,pubDate:o,description:s}});return{title:`Asianfanfics - 标签：${o} - ${a[s]}`,link:c,item:d}}export{i as route};
