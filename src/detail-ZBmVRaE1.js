@@ -1,0 +1,1 @@
+import"./esm-shims-rNwigI-Q.js";import"./config-CVBRPN4O.js";import"./logger-BvonkID1.js";import"./ofetch-CeMUzp5K.js";import"./config-not-found-B7nOMdXp.js";import"./utils-D5Hl9cWM.js";import{getItemList as e,route as t}from"./detail-b-3B53WF.js";export{e as getItemList,t as route};
