@@ -29,10 +29,10 @@ importers:
         version: 4.3.1
       '@hono/node-server':
         specifier: 1.19.5
-        version: 1.19.5(hono@4.10.2)
+        version: 1.19.5(hono@4.10.3)
       '@hono/zod-openapi':
         specifier: 0.19.10
-        version: 0.19.10(hono@4.10.2)(zod@3.25.76)
+        version: 0.19.10(hono@4.10.3)(zod@3.25.76)
       '@notionhq/client':
         specifier: 5.3.0
         version: 5.3.0
@@ -65,7 +65,7 @@ importers:
         version: 0.0.25
       '@scalar/hono-api-reference':
         specifier: 0.9.22
-        version: 0.9.22(hono@4.10.2)
+        version: 0.9.22(hono@4.10.3)
       '@sentry/node':
         specifier: 10.22.0
         version: 10.22.0
@@ -121,8 +121,8 @@ importers:
         specifier: 164.1.0
         version: 164.1.0
       hono:
-        specifier: 4.10.2
-        version: 4.10.2
+        specifier: 4.10.3
+        version: 4.10.3
       html-to-text:
         specifier: 9.0.5
         version: 9.0.5
@@ -461,8 +461,8 @@ packages:
   '@asamuzakjp/css-color@4.0.5':
     resolution: {integrity: sha512-lMrXidNhPGsDjytDy11Vwlb6OIGrT3CmLg3VWNFyWkLWtijKl7xjvForlh8vuj0SHGjgl4qZEQzUmYTeQA2JFQ==}
 
-  '@asamuzakjp/dom-selector@6.7.2':
-    resolution: {integrity: sha512-ccKogJI+0aiDhOahdjANIc9SDixSud1gbwdVrhn7kMopAtLXqsz9MKmQQtIl6Y5aC2IYq+j4dz/oedL2AVMmVQ==}
+  '@asamuzakjp/dom-selector@6.7.3':
+    resolution: {integrity: sha512-kiGFeY+Hxf5KbPpjRLf+ffWbkos1aGo8MBfd91oxS3O57RgU3XhZrt/6UzoVF9VMpWbC3v87SRc9jxGrc9qHtQ==}
 
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
@@ -1926,8 +1926,8 @@ packages:
   '@oxc-project/types@0.95.0':
     resolution: {integrity: sha512-vACy7vhpMPhjEJhULNxrdR0D943TkA/MigMpJCHmBHvMXxRStRi/dPtTlfQ3uDwWSzRpT8z+7ImjZVf8JWBocQ==}
 
-  '@paralleldrive/cuid2@2.2.2':
-    resolution: {integrity: sha512-ZOBkgDwEdoYVlSeRbYYXs0S9MejQofiVYoTbKzy/6GQa39/q5tQU2IX46+shYnUkpEl3wc+J6wRlar7r2EK2xA==}
+  '@paralleldrive/cuid2@2.3.1':
+    resolution: {integrity: sha512-XO7cAxhnTZl0Yggq6jOgjiOHhbgcO4NqFqwSmQpjK3b6TEE6Uj/jfSk6wzYyemh3+I0sHirKSetjQwn5cZktFw==}
 
   '@pinojs/redact@0.4.0':
     resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
@@ -3849,8 +3849,8 @@ packages:
   hmacsha1@1.0.0:
     resolution: {integrity: sha512-4FP6J0oI8jqb6gLLl9tSwVdosWJ/AKSGJ+HwYf6Ixe4MUcEkst4uWzpVQrNOCin0fzTRQbXV8ePheU8WiiDYBw==}
 
-  hono@4.10.2:
-    resolution: {integrity: sha512-p6fyzl+mQo6uhESLxbF5WlBOAJMDh36PljwlKtP5V1v09NxlqGru3ShK+4wKhSuhuYf8qxMmrivHOa/M7q0sMg==}
+  hono@4.10.3:
+    resolution: {integrity: sha512-2LOYWUbnhdxdL8MNbNg9XZig6k+cZXm5IjHn2Aviv7honhBMOHb+jxrKIeJRZJRmn+htUCKhaicxwXuUDlchRA==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -5638,8 +5638,8 @@ packages:
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
-  turndown@7.2.1:
-    resolution: {integrity: sha512-7YiPJw6rLClQL3oUKN3KgMaXeJJ2lAyZItclgKDurqnH61so4k4IH/qwmMva0zpuJc/FhRExBBnk7EbeFANlgQ==}
+  turndown@7.2.2:
+    resolution: {integrity: sha512-1F7db8BiExOKxjSMU2b7if62D/XOyQyZbPKq/nUwopfgnHlqXHqQ0lvfUTeUIr1lZJzOPFn43dODyMSIfvWRKQ==}
 
   tweetnacl@0.14.5:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
@@ -6096,7 +6096,7 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
       lru-cache: 11.2.2
 
-  '@asamuzakjp/dom-selector@6.7.2':
+  '@asamuzakjp/dom-selector@6.7.3':
     dependencies:
       '@asamuzakjp/nwsapi': 2.3.9
       bidi-js: 1.0.3
@@ -7125,21 +7125,21 @@ snapshots:
       '@eslint/core': 0.16.0
       levn: 0.4.1
 
-  '@hono/node-server@1.19.5(hono@4.10.2)':
+  '@hono/node-server@1.19.5(hono@4.10.3)':
     dependencies:
-      hono: 4.10.2
+      hono: 4.10.3
 
-  '@hono/zod-openapi@0.19.10(hono@4.10.2)(zod@3.25.76)':
+  '@hono/zod-openapi@0.19.10(hono@4.10.3)(zod@3.25.76)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 7.3.4(zod@3.25.76)
-      '@hono/zod-validator': 0.7.4(hono@4.10.2)(zod@3.25.76)
-      hono: 4.10.2
+      '@hono/zod-validator': 0.7.4(hono@4.10.3)(zod@3.25.76)
+      hono: 4.10.3
       openapi3-ts: 4.5.0
       zod: 3.25.76
 
-  '@hono/zod-validator@0.7.4(hono@4.10.2)(zod@3.25.76)':
+  '@hono/zod-validator@0.7.4(hono@4.10.3)(zod@3.25.76)':
     dependencies:
-      hono: 4.10.2
+      hono: 4.10.3
       zod: 3.25.76
 
   '@humanfs/core@0.19.1': {}
@@ -7698,7 +7698,7 @@ snapshots:
 
   '@oxc-project/types@0.95.0': {}
 
-  '@paralleldrive/cuid2@2.2.2':
+  '@paralleldrive/cuid2@2.3.1':
     dependencies:
       '@noble/hashes': 1.8.0
 
@@ -7728,7 +7728,7 @@ snapshots:
       moment-parseformat: 3.0.0
       postman-request: 2.88.1-postman.45
       string-direction: 0.1.2
-      turndown: 7.2.1
+      turndown: 7.2.2
       valid-url: 1.0.9
       wuzzy: 0.1.8
       yargs-parser: 15.0.3
@@ -7941,10 +7941,10 @@ snapshots:
     dependencies:
       '@scalar/types': 0.3.2
 
-  '@scalar/hono-api-reference@0.9.22(hono@4.10.2)':
+  '@scalar/hono-api-reference@0.9.22(hono@4.10.3)':
     dependencies:
       '@scalar/core': 0.3.20
-      hono: 4.10.2
+      hono: 4.10.3
 
   '@scalar/openapi-types@0.5.0':
     dependencies:
@@ -9656,7 +9656,7 @@ snapshots:
 
   formidable@3.5.4:
     dependencies:
-      '@paralleldrive/cuid2': 2.2.2
+      '@paralleldrive/cuid2': 2.3.1
       dezalgo: 1.0.4
       once: 1.4.0
 
@@ -9836,7 +9836,7 @@ snapshots:
 
   hmacsha1@1.0.0: {}
 
-  hono@4.10.2: {}
+  hono@4.10.3: {}
 
   hookable@5.5.3: {}
 
@@ -10163,7 +10163,7 @@ snapshots:
 
   jsdom@27.0.1(bufferutil@4.0.9)(postcss@8.5.6)(utf-8-validate@5.0.10):
     dependencies:
-      '@asamuzakjp/dom-selector': 6.7.2
+      '@asamuzakjp/dom-selector': 6.7.3
       cssstyle: 5.3.1(postcss@8.5.6)
       data-urls: 6.0.0
       decimal.js: 10.6.0
@@ -11820,7 +11820,7 @@ snapshots:
     dependencies:
       safe-buffer: '@nolyfill/safe-buffer@1.0.44'
 
-  turndown@7.2.1:
+  turndown@7.2.2:
     dependencies:
       '@mixmark-io/domino': 2.2.0
 
