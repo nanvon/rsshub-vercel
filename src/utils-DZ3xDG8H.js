@@ -1,0 +1,1 @@
+import{t as e}from"./got-dCh-Ojgc.js";const t=`https://zhiy.cc`,n=async n=>{let{data:r}=await e(`${t}/api/app/share/garden/users/${n}`);return r};export{n,t};
