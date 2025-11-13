@@ -1,0 +1,3 @@
+import"./esm-shims-L08rKynx.mjs";import"./config-Bs8nOQqi.mjs";import"./logger-BvLYiR5T.mjs";import"./ofetch-1TBKTiHL.mjs";import"./helpers-mo8InLYm.mjs";import{t as e}from"./cache-BDs-9Wd7.mjs";import"./render-CBhnapAf.mjs";import"./parse-date-bKmkZ9gg.mjs";import"./got-Be7Twwza.mjs";import{a as t,o as n,r,t as i}from"./utils-Q5hd1dCa.mjs";const a={path:[`/videos/bestrated/:language?/:mode?`,`/bestrated/:language?/:mode?`],name:`Unknown`,maintainers:[],handler:o,description:`| Last Month | All Time |
+| ---------- | -------- |
+| 1          | 2        |`,features:{nsfw:!0}};async function o(a){let o=a.req.param(`mode`)??t,s=a.req.param(`language`)??r;return await i(s,`${n}/${s}/vl_bestrated.php?list&mode=${o}`,e.tryGet)}export{a as route};
