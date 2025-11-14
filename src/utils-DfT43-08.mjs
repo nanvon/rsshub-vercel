@@ -1,0 +1,1 @@
+import{t as e}from"./got-2jXbf1Li.mjs";const t=async(t=[])=>(await e(`https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=`+t.join(`,`))).data;export{t};
