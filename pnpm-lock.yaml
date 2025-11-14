@@ -121,8 +121,8 @@ importers:
         specifier: 166.0.0
         version: 166.0.0
       header-generator:
-        specifier: 2.1.75
-        version: 2.1.75
+        specifier: 2.1.77
+        version: 2.1.77
       hono:
         specifier: 4.10.5
         version: 4.10.5
@@ -3929,8 +3929,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  header-generator@2.1.75:
-    resolution: {integrity: sha512-IUyoYkL1eMt788nahD3tiw+A4AZ1mhVIWorHiXnS4rBMIeJ4C4HwoOvSKRkElKIvpKqwpkNO6BGvkPuVsKYRYw==}
+  header-generator@2.1.77:
+    resolution: {integrity: sha512-ggSG/mfkFMu8CO7xP591G8kp1IJCBvgXu7M8oxTjC9u914JsIzE6zIfoFsXzA+pf0utWJhUsdqU0oV/DtQ4DFQ==}
     engines: {node: '>=16.0.0'}
 
   headers-polyfill@4.0.3:
@@ -10064,7 +10064,7 @@ snapshots:
 
   he@1.2.0: {}
 
-  header-generator@2.1.75:
+  header-generator@2.1.77:
     dependencies:
       browserslist: 4.28.0
       generative-bayesian-network: 2.1.77
