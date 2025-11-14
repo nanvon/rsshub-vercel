@@ -1,0 +1,1 @@
+import{t as e}from"./config-L8Ls2W7q.mjs";const t=()=>({accept:`application/json, text/javascript, */*; q=0.01`,cookie:e.smzdm.cookie,"x-requested-with":`XMLHttpRequest`});export{t};

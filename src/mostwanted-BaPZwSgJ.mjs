@@ -1,0 +1,3 @@
+import"./esm-shims-L08rKynx.mjs";import"./config-L8Ls2W7q.mjs";import"./logger-C50fTRi5.mjs";import"./ofetch-DXVwJZV0.mjs";import"./helpers-mo8InLYm.mjs";import{t as e}from"./cache-ZTWfXd2T.mjs";import"./render-CBhnapAf.mjs";import"./parse-date-bKmkZ9gg.mjs";import"./got-D6JCV29k.mjs";import{a as t,o as n,r,t as i}from"./utils-DOGWY2oi.mjs";const a={path:[`/videos/mostwanted/:language?/:mode?`,`/mostwanted/:language?/:mode?`],name:`Unknown`,maintainers:[],handler:o,description:`| Last Month | All Time |
+| ---------- | -------- |
+| 1          | 2        |`,features:{nsfw:!0}};async function o(a){let o=a.req.param(`mode`)??t,s=a.req.param(`language`)??r;return await i(s,`${n}/${s}/vl_mostwanted.php?list&mode=${o}`,e.tryGet)}export{a as route};

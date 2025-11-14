@@ -1,1 +1,0 @@
-import{t as e}from"./ofetch-1TBKTiHL.mjs";import{t}from"./parse-date-bKmkZ9gg.mjs";const n=`https://jamesclear.com`,r=`${n}/wp-json/wp/v2`;async function i(t){return await e(`${r}/${t}`)}function a(e){return{title:e.title.rendered,link:e.link,description:e.content.rendered,pubDate:t(e.date_gmt),author:`James Clear`,guid:e.guid.rendered}}export{a as n,n as r,i as t};

@@ -1,0 +1,5 @@
+import"./esm-shims-L08rKynx.mjs";import"./config-L8Ls2W7q.mjs";import"./logger-C50fTRi5.mjs";import"./ofetch-DXVwJZV0.mjs";import"./helpers-mo8InLYm.mjs";import{t as e}from"./got-D6JCV29k.mjs";const t=async t=>{let{data:n}=await e.get(`https://curiouscat.me/api/v2/profile?username=`+t);return n},n={path:`/user/:id`,radar:[{source:[`curiouscat.live/:id`]}],name:`Unknown`,maintainers:[`lucasew`],handler:r};async function r(e){let n=e.req.param(`id`),r=await t(n),i=r.posts.map(e=>{let t=e.senderData.id?e.senderData.username:`Anonymous`,r=`@${t}: ${e.comment}`,i=`https://curiouscat.live/${n}/post/${e.id}`,a=e.media?`<img src="${e.media.img}"></img>`:``;return{author:t,link:i,title:r,description:`${e.comment}<br><br>
+        ${e.reply}
+        ${a}
+        <br>
+        Likes: ${e.likes}`,pubDate:new Date(e.timestamp*1e3)}});return{title:`CuriousCat - ${n}`,link:`https://curiouscat.live/${n}`,description:`Questions answered by ${n} using CuriousCat`,language:r.lang,item:i}}export{n as route};
