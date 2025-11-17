@@ -1,0 +1,1 @@
+import{t as e}from"./config-L8Ls2W7q.mjs";import{t}from"./ofetch-CvLG4YCQ.mjs";import{t as n}from"./cache-ZTWfXd2T.mjs";import{load as r}from"cheerio";const i=`https://makerworld.com`,a=()=>n.tryGet(`makerworld:nextBuildId`,async()=>{let n=r(await t(`${i}/en`,{headers:{"User-Agent":e.trueUA}}));return JSON.parse(n(`script#__NEXT_DATA__`).text()).buildId});export{a as n,i as t};
