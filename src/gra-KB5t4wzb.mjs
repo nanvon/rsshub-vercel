@@ -1,5 +1,0 @@
-import"./esm-shims-D4LgnpSl.mjs";import"./config-L8Ls2W7q.mjs";import"./logger-C50fTRi5.mjs";import"./ofetch-CvLG4YCQ.mjs";import"./helpers-mo8InLYm.mjs";import"./cache-ZTWfXd2T.mjs";import"./parse-date-bKmkZ9gg.mjs";import"./got-AYh7EWi-.mjs";import"./timezone-CE0MDOJ-.mjs";import"./wechat-mp-CX9xSgiW.mjs";import{t as e}from"./utils-DghyreYO.mjs";const t=`https://grad.nua.edu.cn`,n={path:`/gra/:type`,categories:[`university`],example:`/nua/gra/1959`,parameters:{type:`News Type`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!0,supportBT:!1,supportPodcast:!1,supportScihub:!1},radar:[{source:[`grad.nua.edu.cn/:type/list.htm`]}],name:`Graduate Institute`,maintainers:[`evnydd0sf`],handler:r,description:`| News Type | Parameters |
-| --------- | ---------- |
-| 招生工作  | 1959       |
-| 培养工作  | 1962       |
-| 学位工作  | 1958       |`};async function r(n){let r=n.req.param(`type`),i=`${t}/${r}/list.htm`,a=await e.ProcessList(i,t,`li.list_item`,`.Article_PublishDate`,`.col_title`),o=await e.ProcessFeed(a[0],`.read`);return{title:`NUA-研究生处-`+a[1],link:`${t}/${r}/list.htm`,description:`南京艺术学院 研究生处 `+a[1],item:o}}export{n as route};
