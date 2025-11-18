@@ -1,0 +1,1 @@
+import{t as e}from"./ofetch-CvLG4YCQ.mjs";import{t}from"./cache-ZTWfXd2T.mjs";function n(n,r){return t.tryGet(n,async()=>r(await e(n)))}export{n as t};
