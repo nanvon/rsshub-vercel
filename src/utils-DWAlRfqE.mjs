@@ -1,0 +1,1 @@
+import{n as e,t}from"./esm-shims-D5mxTuu_.mjs";import{t as n}from"./render-D2i47mnC.mjs";import r from"node:path";e();const i=e=>e.props.pageProps.data.summary+e.props.pageProps.data.memo,a=e=>n(r.join(t,`templates/work-3a78c1e3.art`),{data:e.props.pageProps.data});export{a as n,i as t};
