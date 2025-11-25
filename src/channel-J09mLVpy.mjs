@@ -1,0 +1,11 @@
+import"./esm-shims-D5mxTuu_.mjs";import"./config-CDM38Tpk.mjs";import"./logger-B0B1yUZ6.mjs";import"./ofetch-FkpIOIxH.mjs";import"./cache-C6z2tE2n.mjs";import"./render-D2i47mnC.mjs";import"./parse-date-Cv8vEJfE.mjs";import"./not-found-Czrg4Yhr.mjs";import{t as e}from"./invalid-parameter-DQLT-Ijk.mjs";import{a as t,o as n,t as r}from"./utils-Crq52rtm.mjs";import{t as i}from"./youtubei-D49DNR8D.mjs";const a={path:`/channel/:id/:routeParams?`,categories:[`social-media`],example:`/youtube/channel/UCDwDMPOZfxVV0x_dz0eQ8KQ`,parameters:{id:`YouTube channel id`,routeParams:`Extra parameters, see the table below`},radar:[{source:[`www.youtube.com/channel/:id`],target:`/channel/:id`}],name:`Channel with id`,maintainers:[`DIYgod`,`pseudoyu`],handler:o,description:`::: tip Parameter
+| Name       | Description                                                                         | Default |
+| ---------- | ----------------------------------------------------------------------------------- | ------- |
+| embed      | Whether to embed the video, fill in any value to disable embedding                  | embed   |
+| filterShorts | Whether to filter out shorts from the feed, fill in any falsy value to show shorts | true    |
+:::
+
+::: tip
+YouTube provides official RSS feeds for channels, for instance [https://www.youtube.com/feeds/videos.xml?channel_id=UCDwDMPOZfxVV0x_dz0eQ8KQ](https://www.youtube.com/feeds/videos.xml?channel_id=UCDwDMPOZfxVV0x_dz0eQ8KQ).
+:::`,features:{requireConfig:[{name:`YOUTUBE_KEY`,description:" YouTube API Key, support multiple keys, split them with `,`, [API Key application](https://console.developers.google.com/)",optional:!0}],requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1}};async function o(a){let o=a.req.param(`id`),s=a.req.param(`routeParams`),c=new URLSearchParams(s),l=!c.get(`embed`),u=c.get(`filterShorts`),d=u===null||u===``||u===`true`;if(!t.isYouTubeChannelId(o))throw new e(`Invalid YouTube channel ID. 
+You may want to use <code>/youtube/user/:id</code> instead.`);return await r({googleApi:n,youtubeiApi:i,params:{channelId:o,embed:l,filterShorts:d,isJsonFeed:a.req.query(`format`)===`json`}})}export{a as route};
