@@ -1,0 +1,1 @@
+import{n as e,t}from"./esm-shims-BKVRry6h.mjs";import{t as n}from"./render-_fW2cbJz.mjs";import r from"node:path";e();var i={courseDesc:(e,i)=>n(r.join(t,`templates/courseDesc-4e7c77df.art`),{picurl:e,desc:i})};export{i as t};

@@ -1067,8 +1067,8 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.18':
-    resolution: {integrity: sha512-ixuPzXcf5YupofTGm3Xl6bI2jjnzHp6zfKcJ/PCMEBm9Slx+kseAjYIto+G6ctuQNM2Elm0gJ8CEhhBlgHFRHA==}
+  '@csstools/css-syntax-patches-for-csstree@1.0.19':
+    resolution: {integrity: sha512-QW5/SM2ARltEhoKcmRI1LoLf3/C7dHGswwCnfLcoMgqurBT4f8GvwXMgAbK/FwcxthmJRK5MGTtddj0yQn0J9g==}
     engines: {node: '>=18'}
 
   '@csstools/css-tokenizer@3.0.4':
@@ -1458,8 +1458,8 @@ packages:
   '@lifeomic/attempt@3.1.0':
     resolution: {integrity: sha512-QZqem4QuAnAyzfz+Gj5/+SLxqwCAw2qmt7732ZXodr6VDWGeYLG6w1i/vYLa55JQM9wRuBKLmXmiZ2P0LtE5rw==}
 
-  '@mapbox/node-pre-gyp@2.0.0':
-    resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
+  '@mapbox/node-pre-gyp@2.0.2':
+    resolution: {integrity: sha512-pppEzxuUFmNoMb5YObyc4AAr/NrQGhNU/ZuSMLFxkC1JzrfZ4if2O0vI1JuD/oqxf+z/MNTARIekLmgL1PZg/A==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -2416,9 +2416,9 @@ packages:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  abbrev@3.0.1:
-    resolution: {integrity: sha512-AO2ac6pjRB3SJmGJo+v5/aK6Omggp6fsLrs6wN9bd35ulu4cCwaAU9+7ZhXjeqHVkaHThLuzH0nZr0YpCDhygg==}
-    engines: {node: ^18.17.0 || >=20.5.0}
+  abbrev@4.0.0:
+    resolution: {integrity: sha512-a1wflyaL0tHtJSmLSOVybYhy22vRih4eduhhrkcjgrWGnRfrZtovJ2FRjxuTtkkj47O/baf0R86QU5OuYpz8fA==}
+    engines: {node: ^20.17.0 || >=22.9.0}
 
   acorn-import-attributes@1.9.5:
     resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==}
@@ -4572,9 +4572,9 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     hasBin: true
 
-  nopt@8.1.0:
-    resolution: {integrity: sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==}
-    engines: {node: ^18.17.0 || >=20.5.0}
+  nopt@9.0.0:
+    resolution: {integrity: sha512-Zhq3a+yFKrYwSBluL4H9XP3m3y5uvQkB/09CwDruCiRmR/UJYnn9W4R48ry0uGC70aeTPKLynBtscP9efFFcPw==}
+    engines: {node: ^20.17.0 || >=22.9.0}
     hasBin: true
 
   normalize-url@8.1.0:
@@ -6813,7 +6813,7 @@ snapshots:
     dependencies:
       '@csstools/css-tokenizer': 3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.18': {}
+  '@csstools/css-syntax-patches-for-csstree@1.0.19': {}
 
   '@csstools/css-tokenizer@3.0.4': {}
 
@@ -7152,13 +7152,13 @@ snapshots:
 
   '@lifeomic/attempt@3.1.0': {}
 
-  '@mapbox/node-pre-gyp@2.0.0':
+  '@mapbox/node-pre-gyp@2.0.2':
     dependencies:
       consola: 3.4.2
       detect-libc: 2.1.2
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0
-      nopt: 8.1.0
+      nopt: 9.0.0
       semver: 7.7.3
       tar: 7.5.2
     transitivePeerDependencies:
@@ -8171,7 +8171,7 @@ snapshots:
 
   '@vercel/nft@1.1.0(rollup@4.53.3)':
     dependencies:
-      '@mapbox/node-pre-gyp': 2.0.0
+      '@mapbox/node-pre-gyp': 2.0.2
       '@rollup/pluginutils': 5.3.0(rollup@4.53.3)
       acorn: 8.15.0
       acorn-import-attributes: 1.9.5(acorn@8.15.0)
@@ -8253,7 +8253,7 @@ snapshots:
 
   abbrev@2.0.0: {}
 
-  abbrev@3.0.1: {}
+  abbrev@4.0.0: {}
 
   acorn-import-attributes@1.9.5(acorn@8.15.0):
     dependencies:
@@ -8778,7 +8778,7 @@ snapshots:
   cssstyle@5.3.3:
     dependencies:
       '@asamuzakjp/css-color': 4.1.0
-      '@csstools/css-syntax-patches-for-csstree': 1.0.18
+      '@csstools/css-syntax-patches-for-csstree': 1.0.19
       css-tree: 3.1.0
 
   currency-symbol-map@5.1.0: {}
@@ -10654,9 +10654,9 @@ snapshots:
     dependencies:
       abbrev: 2.0.0
 
-  nopt@8.1.0:
+  nopt@9.0.0:
     dependencies:
-      abbrev: 3.0.1
+      abbrev: 4.0.0
 
   normalize-url@8.1.0: {}
 

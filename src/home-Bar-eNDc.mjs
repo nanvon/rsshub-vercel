@@ -1,8 +1,0 @@
-import"./esm-shims-D5mxTuu_.mjs";import"./config-CDM38Tpk.mjs";import"./logger-B0B1yUZ6.mjs";import{t as e}from"./ofetch-FkpIOIxH.mjs";import{t}from"./cache-C6z2tE2n.mjs";import{t as n}from"./parse-date-Cv8vEJfE.mjs";import{t as r}from"./timezone-DuBj3K5r.mjs";import{load as i}from"cheerio";const a=`https://www.qztc.edu.cn/`,o={path:`/home/:type`,categories:[`university`],example:`/qztc/home/2093`,parameters:{type:`分类，见下表`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`首页`,maintainers:[`iQNRen`],url:`www.qztc.edu.cn`,handler:s,radar:[{source:[`www.qztc.edu.cn/:type/list.htm`],target:`/home/:type`}],description:`| 板块 | 参数 |
-| ------- | ------- |
-| 泉师新闻 | 2093 |
-| 通知公告 | 2094 |
-| 采购公告 | 2095 |
-| 学术资讯 | xszx |
-| 招聘信息 | 2226 |
-`};async function s(o){let s=o.req.param(`type`),c=i(await e(a+s+`/list.htm`)),l=c(`.news.clearfix`).toArray().map(e=>{let t=c(e),i=t.find(`a`);try{let e=i.attr(`title`)||``,o=i.attr(`href`);o?o.startsWith(`http`)||(o=a.slice(0,-1)+o):o=``;let s=r(n(t.find(`.news_meta`).text()),8);return{title:e,link:o,pubDate:s}}catch{return{title:``,link:``,pubDate:Date.now()}}}).filter(e=>e.title&&e.link),u=await Promise.all(l.map(n=>t.tryGet(n.link,async()=>{let t={...n,description:``};return t.description=i(await e(n.link))(`.wp_articlecontent`).html()||``,t})));return{title:c(`head > title`).text()+` - 泉州师范学院-首页`,link:a+s+`/list.htm`,item:u}}export{o as route};
