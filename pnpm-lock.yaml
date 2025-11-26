@@ -1067,8 +1067,8 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.17':
-    resolution: {integrity: sha512-LCC++2h8pLUSPY+EsZmrrJ1EOUu+5iClpEiDhhdw3zRJpPbABML/N5lmRuBHjxtKm9VnRcsUzioyD0sekFMF0A==}
+  '@csstools/css-syntax-patches-for-csstree@1.0.18':
+    resolution: {integrity: sha512-ixuPzXcf5YupofTGm3Xl6bI2jjnzHp6zfKcJ/PCMEBm9Slx+kseAjYIto+G6ctuQNM2Elm0gJ8CEhhBlgHFRHA==}
     engines: {node: '>=18'}
 
   '@csstools/css-tokenizer@3.0.4':
@@ -6813,7 +6813,7 @@ snapshots:
     dependencies:
       '@csstools/css-tokenizer': 3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.17': {}
+  '@csstools/css-syntax-patches-for-csstree@1.0.18': {}
 
   '@csstools/css-tokenizer@3.0.4': {}
 
@@ -8778,7 +8778,7 @@ snapshots:
   cssstyle@5.3.3:
     dependencies:
       '@asamuzakjp/css-color': 4.1.0
-      '@csstools/css-syntax-patches-for-csstree': 1.0.17
+      '@csstools/css-syntax-patches-for-csstree': 1.0.18
       css-tree: 3.1.0
 
   currency-symbol-map@5.1.0: {}
