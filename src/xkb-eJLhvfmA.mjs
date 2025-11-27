@@ -1,0 +1,9 @@
+import{n as e,t}from"./esm-shims-BKVRry6h.mjs";import"./ofetch-BRplXtiZ.mjs";import"./config-D7dgKYF5.mjs";import"./logger-CkUWGGaS.mjs";import{t as n}from"./cache-Bv3_kFbE.mjs";import"./helpers-Tm7Pw8Vq.mjs";import{t as r}from"./parse-date-_GmTZfjS.mjs";import{t as i}from"./render-CSqLtqb8.mjs";import{t as a}from"./got-BglkE51W.mjs";import{t as o}from"./timezone-BAp4uBjD.mjs";import s from"node:path";e();const c={path:`/:channel`,categories:[`traditional-media`],example:`/xkb/350`,parameters:{channel:`栏目 ID，点击对应栏目后在地址栏找到`},features:{requireConfig:!1,requirePuppeteer:!1,antiCrawler:!1,supportBT:!1,supportPodcast:!1,supportScihub:!1},name:`新闻`,maintainers:[`TimWu007`],handler:l,description:`常用栏目 ID：
+
+| 栏目名 | ID  |
+| ------ | --- |
+| 首页   | 350 |
+| 重点   | 359 |
+| 广州   | 353 |
+| 湾区   | 360 |
+| 天下   | 355 |`};async function l(e){let c=e.req.param(`channel`)??350,{data:l}=await a({method:`get`,url:`https://www.xkb.com.cn/xkbapp/fundapi/article/api/articles?chnlId=${c}&visibility=1&page=0&size=20&keyword=`,headers:{siteId:35}}),u=l.data.filter(e=>e.contentUrl).map(e=>({title:e.listTitle,description:i(s.join(t,`templates/description-60b509f9.art`),{thumb:e.shareImg}),pubDate:o(r(e.operTime),8),link:`https://www.xkb.com.cn/detail?id=`+e.id,contentUrl:e.contentUrl,author:e.metaInfo.author,chnlName:e.metaInfo.chnlName})),d=``,f=await Promise.all(u.map(e=>n.tryGet(e.contentUrl,async()=>{let t=await a({method:`get`,url:e.contentUrl});return e.description+=t.data.htmlContent??``,d=d===``?e.chnlName:d,e})));return{title:`新快报新快网 - ${d}`,link:`https://www.xkb.com.cn/home?id=${c}`,item:f}}export{c as route};

@@ -1,0 +1,1 @@
+import{t as e}from"./got-BglkE51W.mjs";const t=`https://zhiy.cc`,n=async n=>{let{data:r}=await e(`${t}/api/app/share/garden/users/${n}`);return r};export{n,t};

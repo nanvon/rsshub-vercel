@@ -1,0 +1,1 @@
+import{t as e}from"./parse-date-_GmTZfjS.mjs";import{t}from"./got-BglkE51W.mjs";import{t as n}from"./timezone-BAp4uBjD.mjs";async function r(r,i){let{data:a}=await t(`https://www.lifeweek.com.cn/api/article/${r.id}`),o=n(e(r.pubTime),8);return{title:r.title,description:a.model.content,link:i,pubDate:o}}var i=r;export{i as t};
