@@ -1,0 +1,1 @@
+import{t as e}from"./config-D7dgKYF5.mjs";import t from"rss-parser";var n=new t({customFields:{item:[`magnet`]},headers:{"User-Agent":e.ua}});export{n as t};

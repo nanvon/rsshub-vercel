@@ -1,1 +1,0 @@
-import{t as e}from"./md5-DQY53j6Z.mjs";function t(t){return e(Object.entries(t).map(e=>`${e[1].os}/${e[1].architecture},${e[1].digest}`).toSorted((e,t)=>e.localeCompare(t)).join(`|`))}export{t};
